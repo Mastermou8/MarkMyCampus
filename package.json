@@ -1,0 +1,35 @@
+{
+  "name": "markmycampus",
+  "version": "1.0.0",
+  "description": "A dynamic campus map application that allows students to log in, mark points of interest on an interactive map, and visualize data through heat maps. This tool helps Student Government Associations (SGA) identify high-traffic areas and locations where students need improvements like benches, study spaces, or other amenities.",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mastermou8/MarkMyCampus.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mastermou8/MarkMyCampus/issues"
+  },
+  "homepage": "https://github.com/Mastermou8/MarkMyCampus#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.5",
+    "exceljs": "^4.4.0",
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "jsonwebtoken": "^9.0.3",
+    "sqlite3": "^5.1.7"
+  }
+}

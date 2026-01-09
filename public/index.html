@@ -26,9 +26,134 @@
 </head>
 <body>
     <!-- TODO: Add login/register modal -->
+     <div id="authModal" class="modal">
+    <div class="modal-content">
+        <h2 id="authTitle">Login to MarkMyCampus</h2>
+        <div id="authError" class="error-message"></div>
+        
+        <form id="authForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="6">
+            </div>
+            
+            <button type="submit" id="authSubmit" class="btn btn-primary">Login</button>
+        </form>
+        
+        <p class="toggle-auth">
+            <span id="toggleAuthText">Don't have an account?</span>
+            <a href="#" id="toggleAuth">Register here</a>
+        </p>
+        
+        <p class="toggle-auth">
+            <a href="#" id="adminLink">Admin Login</a>
+        </p>
+    </div>
+</div>
+
+<!-- Admin Login Modal -->
+<div id="adminModal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Admin Login</h2>
+        <div id="adminError" class="error-message"></div>
+        
+        <form id="adminForm">
+            <div class="form-group">
+                <label for="adminPassword">Admin Password:</label>
+                <input type="password" id="adminPassword" name="adminPassword" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Login as Admin</button>
+        </form>
+        
+        <p class="toggle-auth">
+            <a href="#" id="backToAuth">Back to User Login</a>
+        </p>
+    </div>
+</div>
+
+<!-- Admin Dashboard Modal -->
+<div id="adminPanel" class="modal hidden">
+    <div class="modal-content" style="max-width: 1000px;">
+        <h2>Admin Dashboard</h2>
+        
+        <div class="admin-actions">
+            <button id="downloadStatsBtn" class="btn btn-primary">📊 Download Stats</button>
+            <button id="viewAllMarkersBtn" class="btn btn-secondary">👁️ View All Markers</button>
+            <button id="clearAllBtn" class="btn btn-danger">🗑️ Clear All Markers</button>
+            <button id="closeAdminBtn" class="btn btn-secondary">Close Admin Panel</button>
+            <button id="adminLogoutBtn" class="btn btn-secondary">Logout</button>
+        </div>
+        
+        <!-- Admin Map -->
+        <div id="adminMap" style="height: 500px; width: 100%; border-radius: 10px; margin-bottom: 20px; display: none;"></div>
+        
+        <div id="adminMarkersPanel" class="hidden">
+            <h3>All Markers</h3>
+            <div id="adminMarkersList"></div>
+        </div>
+    </div>
+</div>
     <!-- TODO: Add main application interface -->
-    <!-- TODO: Add map container -->
-    <!-- TODO: Add statistics panel -->
+     <div id="app" class="hidden">
+    <header>
+        <div class="container">
+            <h1>🗺️ MarkMyCampus</h1>
+            <div class="user-info">
+                <span id="welcomeUser"></span>
+                <button id="adminPanelBtn" class="btn btn-warning hidden">Admin</button>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Instructions -->
+        <div class="instructions">
+            <h2>How to Use</h2>
+            <p>Click anywhere on the campus map to mark a point of interest. Areas with more marks will appear "hotter" on the heat map, helping SGA identify popular areas that may need improvements like benches, study spaces, or other amenities.</p>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="control-group">
+                <label for="categorySelect">Category:</label>
+                <select id="categorySelect">
+                    <option value="general">General Interest</option>
+                    <option value="seating">Need Seating</option>
+                    <option value="study">Study Space</option>
+                    <option value="social">Social Area</option>
+                    <option value="food">Food/Dining</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="descriptionInput">Description (optional):</label>
+                <input type="text" id="descriptionInput" placeholder="e.g., Need more benches here">
+            </div>
+
+            <button id="toggleHeatmap" class="btn btn-primary">Toggle Heat Map</button>
+            <button id="viewStats" class="btn btn-secondary">View Statistics</button>
+        </div>
+<!-- TODO: Add map container -->
+        <!-- Map Container -->
+        <div id="map"></div>
+<!-- TODO: Add statistics panel -->
+        <!-- Statistics Panel -->
+        <div id="statsPanel" class="stats-panel hidden">
+            <h3>Campus Interest Statistics</h3>
+            <div id="statsContent"></div>
+        </div>
+    </div>
+</div>
+    
+    
     
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
