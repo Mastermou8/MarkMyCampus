@@ -103,21 +103,14 @@ All implementation guides are located in the `docs/` directory:
 - Modify color schemes and styling
 - Add additional features like comments or voting
 
-## 🤝 Contributing
+## 👤 Author
 
-This is a student project for campus improvement. Feel free to fork and customize for your own campus!
+**Mastermou8** - Developer and creator of MarkMyCampus
 
 ## 📄 License
 
 ISC
 
-## 🆘 Support
-
-For questions or issues:
-1. Check the documentation in the `docs/` folder
-2. Review the guides for step-by-step instructions
-3. Open an issue on GitHub if you need help
-
 ---
 
-**Ready to build?** Start with `docs/SETUP_GUIDE.md`!
+**Ready to explore?** Start with `docs/SETUP_GUIDE.md`!
