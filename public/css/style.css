@@ -1,0 +1,32 @@
+/*
+    MarkMyCampus - Main Stylesheet
+    
+    This file will contain:
+    1. Base styles and resets
+    2. Modal/authentication styles
+    3. Layout and header styles
+    4. Map container styles
+    5. Button and form styles
+    6. Responsive design
+    
+    Follow the FRONTEND_GUIDE.md in the docs/ folder for complete implementation.
+*/
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* TODO: Add modal styles */
+/* TODO: Add header styles */
+/* TODO: Add map container styles */
+/* TODO: Add form and button styles */
+/* TODO: Add responsive media queries */
