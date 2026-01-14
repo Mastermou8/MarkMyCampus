@@ -25,8 +25,6 @@ This project enables your SGA to:
 MarkMyCampus/
 ├── docs/
 │   ├── SETUP_GUIDE.md         # Step-by-step setup instructions
-│   ├── BACKEND_GUIDE.md       # Backend implementation guide
-│   ├── FRONTEND_GUIDE.md      # Frontend implementation guide
 │   └── API_REFERENCE.md       # API endpoint documentation
 ├── public/
 │   ├── index.html             # Main HTML page (to be created)
