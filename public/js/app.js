@@ -1,5 +1,5 @@
 /*
-    MarkMyCampus - Frontend JavaScript
+    
     
     This file will contain:
     1. Authentication logic (login/register)
@@ -9,7 +9,7 @@
     5. Statistics display
     6. API communication functions
     
-    Follow the FRONTEND_GUIDE.md in the docs/ folder for complete implementation.
+    
 */
 
 // Global variables
